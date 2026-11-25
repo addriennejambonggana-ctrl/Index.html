@@ -1,10 +1,12 @@
 :root {
-  --accent: #b45309;      /* Warm amber/ochre accent */
-  --accent-soft: #fffbeb; /* Subtle warm tint for surfaces */
-  --ink: #1e1b4b;         /* Deep indigo for headings & primary text */
-  --body: #27272a;        /* Soft charcoal for easy long-form reading */
-  --muted: #64748b;       /* Cool slate for secondary text */
-  --line: #e2e8f0;        /* Crisp neutral hairline border */
+  --bg: #14110f;          /* Deep espresso charcoal background */
+  --surface: #1d1815;     /* Warm dark card & surface tone */
+  --accent: #e08e45;      /* Warm glowing amber/terracotta accent */
+  --accent-soft: #28201b; /* Subtle warm dark tint for soft sections & badges */
+  --ink: #f5efe6;         /* Warm cream/ivory for headings & primary links */
+  --body: #d6ccc2;        /* Warm stone/sand for easy dark-mode reading */
+  --muted: #9c8f83;       /* Muted taupe for secondary text */
+  --line: #322a24;        /* Subtle warm bronze-brown hairline border */
 }
 
 html {
@@ -15,7 +17,7 @@ html {
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: var(--body);
-  background: #ffffff;
+  background: var(--bg);
   line-height: 1.8;
 }
 
@@ -29,7 +31,7 @@ a:hover {
 }
 
 .navbar {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(20, 17, 15, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
   position: sticky;
@@ -53,7 +55,7 @@ a:hover {
 }
 
 .hero {
-  background: linear-gradient(180deg, var(--accent-soft) 0%, #ffffff 75%);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 75%);
   color: var(--ink);
 }
 
@@ -76,15 +78,17 @@ a:hover {
 
 .btn-dark {
   border-radius: 0;
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+  font-weight: 500;
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-dark:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
 }
 
 section {
@@ -109,7 +113,7 @@ section {
 }
 
 .card {
-  background: #ffffff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 0;
   box-shadow: none;
@@ -141,7 +145,7 @@ section {
 }
 
 footer {
-  background: #ffffff;
+  background: var(--bg);
   color: var(--muted);
   border-top: 1px solid var(--line);
   font-size: 0.85rem;
