@@ -1,12 +1,12 @@
 :root {
-  --bg: #14110f;          /* Deep espresso charcoal background */
-  --surface: #1d1815;     /* Warm dark card & surface tone */
-  --accent: #e08e45;      /* Warm glowing amber/terracotta accent */
-  --accent-soft: #28201b; /* Subtle warm dark tint for soft sections & badges */
-  --ink: #f5efe6;         /* Warm cream/ivory for headings & primary links */
-  --body: #d6ccc2;        /* Warm stone/sand for easy dark-mode reading */
-  --muted: #9c8f83;       /* Muted taupe for secondary text */
-  --line: #322a24;        /* Subtle warm bronze-brown hairline border */
+  --bg: #f8fafc;          /* Soft off-white background (reduces eye strain) */
+  --surface: #ffffff;     /* Pure white for cards so they pop cleanly */
+  --accent: #1d4ed8;      /* Rich royal blue for links, badges & highlights */
+  --accent-soft: #eff6ff; /* Very light blue tint for soft sections */
+  --ink: #0f172a;         /* Deep slate-black for ultra-sharp headings */
+  --body: #1e293b;        /* Dark charcoal-slate for high-contrast body text */
+  --muted: #475569;       /* Readable medium-dark slate for secondary text */
+  --line: #cbd5e1;        /* Crisp, visible hairline border */
 }
 
 html {
@@ -22,16 +22,16 @@ body {
 }
 
 a {
-  color: var(--ink);
+  color: var(--accent);
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .navbar {
-  background: rgba(20, 17, 15, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
   position: sticky;
@@ -45,7 +45,7 @@ a:hover {
 }
 
 .nav-link {
-  color: var(--muted) !important;
+  color: var(--body) !important;
   font-size: 0.9rem;
 }
 
@@ -64,31 +64,31 @@ a:hover {
 }
 
 .hero h1 {
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
 
 .hero .lead {
   color: var(--muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 520px;
   margin: 1rem auto 2rem;
 }
 
 .btn-dark {
   border-radius: 0;
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #ffffff;
   font-weight: 500;
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-dark:hover {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
 }
 
 section {
@@ -126,7 +126,7 @@ section {
 
 .card h3 {
   color: var(--ink);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .card-img-top {
@@ -141,11 +141,11 @@ section {
   color: var(--accent);
   border: 1px solid var(--accent);
   border-radius: 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 footer {
-  background: var(--bg);
+  background: var(--surface);
   color: var(--muted);
   border-top: 1px solid var(--line);
   font-size: 0.85rem;
